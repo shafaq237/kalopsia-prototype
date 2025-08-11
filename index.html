@@ -7,9 +7,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kalopsia — gifting meaningful experiences, not things. Turn ordinary moments into memorable stories." />
 </head>
 <body>
   <header class="site-header">
@@ -53,53 +51,55 @@
         <div class="about-text">
           <h2>What is Kalopsia?</h2>
           <p class="lead">Kalopsia is a platform dedicated to <strong>gifting meaningful experiences</strong>, not things. We turn ordinary moments into memorable stories — dreamy, personalized experiences that linger.</p>
-
           <ul class="key-points">
             <li>Transform everyday gestures into curated experiences.</li>
             <li>Help people feel more, live more, and gift more beautifully.</li>
             <li>We believe that “Most beautiful things in life... can't be wrapped.”</li>
           </ul>
-
           <a class="btn" href="#contact">Plan an Experience</a>
         </div>
-
         <div class="about-image">
-          <img src="cat.jpg" alt="Relaxed cat — placeholder" />
+          <img src="cat.jpg" alt="Relaxed cat" />
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="section services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="section-lead">Tailored experiences for every moment — intimate, joyful, and unforgettable.</p>
+<!-- Services -->
+<section id="services" class="section services">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="section-lead">Tailored experiences for every moment — intimate, joyful, and unforgettable.</p>
+    <div class="grid services-grid">
+      <article class="card">
+        <h3>Serenity Spa Escape</h3>
+        <p>Step into a world of calm where stress melts away. This experience offers a luxurious spa session featuring soothing massages, aromatic oils, soft music, and a peaceful environment.</p>
+        <p class="price"><strong>Price:</strong> PKR 5,000</p>
+        <a class="btn primary" href="book.html?service=Serenity Spa Escape&price=5000">Book Now</a>
+      </article>
 
-        <div class="grid services-grid">
-          <article class="card">
-            <h3>Serenity Spa Escape</h3>
-            <p>Step into a world of calm where stress melts away. This experience offers a luxurious spa session featuring soothing massages, aromatic oils, soft music, and a peaceful environment.</p>
-          </article>
+      <article class="card">
+        <h3>Picnic in Pastels</h3>
+        <p>A dreamy, picture-perfect outdoor setup styled in soft pastel tones — all set in a serene natural location ideal for long-distance surprises or anniversaries.</p>
+        <p class="price"><strong>Price:</strong> PKR 7,000</p>
+        <a class="btn primary" href="book.html?service=Picnic in Pastels&price=7000">Book Now</a>
+      </article>
 
-          <article class="card">
-            <h3>Picnic in Pastels</h3>
-            <p>A dreamy, picture-perfect outdoor setup styled in soft pastel tones — all set in a serene natural location ideal for long-distance surprises or anniversaries.</p>
-          </article>
+      <article class="card">
+        <h3>Custom Events</h3>
+        <p>Personalized events and moments designed to reflect your story and connection—intimate or grand.</p>
+        <p class="price"><strong>Price:</strong> Starting from PKR 10,000</p>
+        <a class="btn primary" href="book.html?service=Custom Events&price=10000">Book Now</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-          <article class="card">
-            <h3>Custom Events</h3>
-            <p>Personalized events and moments designed to reflect your story and connection—intimate or grand.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- Gallery -->
     <section id="gallery" class="section gallery">
       <div class="container">
         <h2>Gallery</h2>
         <p class="section-lead">Snapshots from moments we've helped create.</p>
-
         <div class="grid gallery-grid">
           <div class="thumb"><img src="placeholder1.jpg" alt="Gallery image 1"></div>
           <div class="thumb"><img src="placeholder2.jpg" alt="Gallery image 2"></div>
@@ -115,23 +115,18 @@
         <div>
           <h2>Let's Create Something Beautiful</h2>
           <p class="section-lead">Tell us about the person, moment, or mood — and we'll craft an experience around it.</p>
-
           <ul class="contact-info">
             <li><strong>Email:</strong> malalaikiwan@kalopsia.com</li>
             <li><strong>Instagram:</strong> @kalopsia</li>
           </ul>
         </div>
-
-        <form class="contact-form" action="#" method="post" onsubmit="alert('This is a demo form — connect it to a backend to submit.'); return false;">
+        <form class="contact-form" action="#" method="post">
           <label for="name">Your name</label>
           <input id="name" name="name" type="text" required>
-
           <label for="email">Email</label>
           <input id="email" name="email" type="email" required>
-
           <label for="message">Tell us a short idea</label>
           <textarea id="message" name="message" rows="5" required></textarea>
-
           <button class="btn primary" type="submit">Send</button>
         </form>
       </div>
@@ -146,12 +141,9 @@
   </footer>
 
   <script>
-    // small interactive bits
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.main-nav');
-
     navToggle.addEventListener('click', () => {
       const expanded = navToggle.getAttribute('aria-expanded') === 'true';
       navToggle.setAttribute('aria-expanded', String(!expanded));
