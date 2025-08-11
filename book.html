@@ -94,11 +94,17 @@
     document.getElementById('service').value = params.get('service') || '';
     document.getElementById('price').value = params.get('price') || '';
 
-    // Button redirects
+    // Confirm booking button with validation
     document.getElementById('confirmBtn').addEventListener('click', function() {
-      window.location.href = "booking-confirmed.html";
+      const form = document.getElementById('bookingForm');
+      if (form.checkValidity()) {
+        window.location.href = "booking-confirmed.html";
+      } else {
+        alert("Please fill out all required fields before confirming your booking.");
+      }
     });
 
+    // Add to cart button
     document.getElementById('cartBtn').addEventListener('click', function() {
       window.location.href = "cart-success.html";
     });
